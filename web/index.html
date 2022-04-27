@@ -28,6 +28,11 @@
     }
     .box1 {
       background-color: yellow;
+      width: 10vw;
+      position: relative;
+      animation-name: fall, fadeout;
+      animation-duration: 5s;
+      animation-iteration-count: infinite;
     }
     .box2 {
       position: relative;
@@ -46,6 +51,25 @@
       background-color: blueviolet;
       top: 50px;
       left: 50px;
+    }
+    @keyframes fall {
+      0% {
+        top: 0;
+      }
+      50% {
+        top: 100px;
+      }
+      100%{
+        top: 300px;
+      }
+    }
+    @keyframes fadeout {
+      0% {
+        opacity: 1;
+      }
+      100%{
+        opacity: 0;
+      }
     }
   </style>
 </head>
