@@ -39,3 +39,10 @@ keyframes란 문법으로 애니메이션의 진행도에 따라 어떤 동작�
 ```
 keyframe 적용하기
 추가로 animation-play-state라는 프로퍼티가 있는데 paused값을 주면 애니메이션을 정지시킬 수 있음, javascript에서 제어하기 위한 프로퍼티
+
+```css
+.box1 {
+  /* name duration timing-function delay iteration-count direction*/
+  animation: ball 2s ease-in 4s infinite reverse both paused 
+}
+```

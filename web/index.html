@@ -7,69 +7,31 @@
   <title>으 나도 웹페이지좀 제대로 만들어 보자!!</title>
   <link href="https://fonts.googleapis.com/css2?family=Akshar&display=swap" rel="stylesheet">
   <style>
-    p.akshar{
-      font-family:'Akshar';
-      font-weight: 700;
-      font-variant: small-caps;
-      letter-spacing: 10px;
-      word-spacing: 10px;
-      text-decoration: line-through;
-      width: 500px;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
-    p{
-      font-weight: 900;
-    }
-    div {
-      width: 200px;
-      height: 200px;
-    }
     .box1 {
-      background-color: yellow;
+      float: left;
       width: 10vw;
-      position: relative;
-      animation-name: fall, fadeout;
-      animation-duration: 5s;
-      animation-iteration-count: infinite;
+      height: 10vw;
+      background-color: yellow;
     }
     .box2 {
-      position: relative;
-      background-color: blue;
-      top: 50px;
-      left: 50px;
+      width: 200px;
+      height: 200px;
+      background-color: black;
     }
     .box3 {
-      position: absolute;
-      background-color: brown;
-      top: 50px;
-      left: 50px;
+      width: 200px;
+      height: 200px;
+      background-color: blue;
     }
     .box4 {
-      position: fixed;
-      background-color: blueviolet;
-      top: 50px;
-      left: 50px;
+      width: 200px;
+      height: 200px;
+      background-color: green;
     }
-    @keyframes fall {
-      0% {
-        top: 0;
-      }
-      50% {
-        top: 100px;
-      }
-      100%{
-        top: 300px;
-      }
-    }
-    @keyframes fadeout {
-      0% {
-        opacity: 1;
-      }
-      100%{
-        opacity: 0;
-      }
+    .clearfix::after {
+      content: "";
+      clear: both;
+      display: block;
     }
   </style>
 </head>
@@ -77,33 +39,13 @@
   <p class="akshar">asd asdjdshvjskdhvjkldshvjkhdwsjvkhsljkvhsdjkvhldsjkhvjkdh</p> 
   <p>asd</p>
   <h1>css는 누구 머리에서 나온걸까</h1>
-  <div class="box1"></div>
-  <div class="box2"><div class="box3"></div></div>
+  <div class="clearfix"> 
+    <div class="box1"></div>
+    <div class="box1"></div>
+    <div class="box1"></div>
+  </div>
+  <div class="box2"></div>
   <div class="box3"></div>
   <div class="box4"></div>
-  <p>asd</p>
-  <p>asd</p>
-  <p>asd</p>
-  <p>asd</p>
-  <p>asd</p>
-  <p>asd</p>
-  <p>asd</p>
-  <p>asd</p>
-  <p>asd</p>
-  <p>asd</p>
-  <p>asd</p>
-  <p>asd</p>
-  <p>asd</p>
-  <p>asd</p>
-  <p>asd</p>
-  <p>asd</p>
-  <p>asd</p>
-  <p>asd</p>
-  <p>asd</p>
-  <p>asd</p>
-  <p>asd</p>
-  <p>asd</p>
-  <p>asd</p>
-  <p>asd</p>
 </body>
 </html>
