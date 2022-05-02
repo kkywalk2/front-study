@@ -27,3 +27,51 @@ ppi 혹은 pixel density, 또는 화소 밀도로 계산하여 width값을 부�
 따라서 일반적으로 device-width는 '해상도 너비/pixel density' 로 계산
 따로 설정하지 않으면 980px로 가정하고 출력함
 
+### 반응형 레이아웃
+
+- 반응형 웹의 핵심 기능은 @media를 사용하는 것
+
+```css
+@media media-type and (media-feature-rule) {
+    /*CSS rules go here*/
+}
+```
+
+#### media-type(미디어 유형) : 보통 all 또는 screen 사용
+- all
+- print
+- screen
+- speech -> 이거 뭐임?
+
+#### media-feature-rule : media의 조건
+- width : min-width, max-width로 최소 너비/최대 너비로 많이 사용함
+- height
+- device-width
+- device-height
+- orientation : 디바이스 방향(가로, 세로)
+- aspect-ratio : viewport의 가로세로비
+
+```css
+@media (max-width: 1024px) {
+
+}
+
+@media only screen and (max-width: 1024px) {
+
+}
+
+@media only screen and (max-width: 1200px) and (orientation: landscape) {
+
+}
+
+@media only screen and (min-height: 680px) and (orientation: portrait) {
+
+}
+
+@media not all and (orientation: portrait) {
+
+}
+```
+
+위는 사용예시, 이정도의 유스케이스만 알아도 충분하다고 함
+
