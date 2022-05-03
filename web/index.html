@@ -7,8 +7,8 @@
   <title>으 나도 웹페이지좀 제대로 만들어 보자!!</title>
   <link href="https://fonts.googleapis.com/css2?family=Akshar&display=swap" rel="stylesheet">
   <style>
-    .float {
-      float: left;
+    .flexbox {
+      display: flex;
     }
     .box1 {
       width: 10vw;
@@ -36,8 +36,8 @@
       display: block;
     }
     @media only screen and (max-width:768px) {
-      .float {
-        float: none;
+      .flexbox {
+        display: block;
       }
     }
   </style>
@@ -46,9 +46,11 @@
   <p class="akshar">asd asdjdshvjskdhvjkldshvjkhdwsjvkhsljkvhsdjkvhldsjkhvjkdh</p> 
   <p>asd</p>
   <h1>css는 누구 머리에서 나온걸까</h1>
-  <div class="float box1"></div>
-  <div class="float box2"></div>
-  <div class="float box3"></div>
-  <div class="float box4"></div>
+  <div class="flexbox">
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+    <div class="box4"></div>
+  </div>
 </body>
 </html>
