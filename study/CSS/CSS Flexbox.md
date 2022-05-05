@@ -51,6 +51,23 @@ justify-content 프로퍼티로 flexbox내부의 요소의 정렬을 설정할 �
 ```
 flex-wrap설정을 wrap으로 바꾸면 자식 엘리먼트가 넘치는 경우 다음줄로 넘어감, 기본적으로 한줄로만 표현함
 
+### flex의 item레벨에서 설정할 수 있는 프로퍼티
+
+- order : order값이 작을수록 먼저 배치
+- flex-grow : item의 가로 증가 비율(그냥 비율이라고 생각해도 될듯)
+- flex-shrink : item의 가로 축소 비율, 뭔가 개념이 미묘..
+- flex-basis : 기본값은 auto, 기본 너비 설정
+
+```css
+{
+    flex : flex-grow flex-shrink flex-basis /*단축 속성은 IE에서 호환성 이슈가 있음*/
+}
+```
+
+- align-self : 세로 정렬의 기준을 item단위로 변경, 값은 align-items와 동일한 값을 가진다
+
+[링크](https://codepen.io/enxaneta/full/adLPwv)에서 flex box의 프로퍼티들을 쉽게 실습해 볼 수 있음
+
 ### 팁
 
 div 박스 내의 텍스트를 가운데 정렬하려면 
