@@ -139,6 +139,83 @@ section {
     align-content: center;
 }
 
+.manga-container {
+    width: 100%;
+    margin-top: 2rem;
+}
+
+.manga-title-container {
+    width: 100%;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+
+.manga-title {
+    font-size: 1.3rem;
+}
+
+.arrow-container {
+    display: flex;
+}
+
+.slide-prev {
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.slide-next {
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.class-list {
+    display: flex;
+    list-style: none;
+}
+
+.class-card {
+    width: 180px;
+    box-shadow: 12px 12px 2px 1px rgba(25, 42, 70, 0.2);
+    border-radius: 8px;
+    margin: 0 10px;
+}
+
+.class-list-thumb {
+    width: 180px;
+    height: 240px;
+    border-radius: 8px 8px 0 0;
+}
+
+.class-container {
+    width: 100%;
+    padding: 0.5rem 1rem 1rem 1rem;
+}
+
+.information-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.manga-genre {
+    font-size: 0.9rem;
+    color: gray;
+}
+
+.manga-tag {
+    font-size: 0.9rem;
+    color: yellow;
+    background-color: blue;
+}
+
+.manga-title {
+    font-size: 1rem;
+}
+
+.manga-desc {
+
+}
 
 @media only screen and (min-width: 1200px){
     .inner {
