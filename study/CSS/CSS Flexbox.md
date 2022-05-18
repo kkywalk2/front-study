@@ -55,7 +55,7 @@ flex-wrap설정을 wrap으로 바꾸면 자식 엘리먼트가 넘치는 경우 
 
 - order : order값이 작을수록 먼저 배치
 - flex-grow : item의 가로 증가 비율(그냥 비율이라고 생각해도 될듯)
-- flex-shrink : item의 가로 축소 비율, 뭔가 개념이 미묘..
+- flex-shrink : item의 가로 축소 비율, 뭔가 개념이 미묘..(explorer에서 발생하는 overflow에 대한 축소를 막으려면 0값을 주어야함)
 - flex-basis : 기본값은 auto, 기본 너비 설정
 
 ```css

@@ -129,6 +129,11 @@ section {
     box-shadow: 12px 12px 2px 1px rgba(25, 42, 70, 0.2);
 }
 
+.genre:hover {
+    transition: transform 1s;
+    transform: translate(0, -5px);
+}
+
 .genre-icon {
     font-size: 2.5rem;
     margin: 0 5px;
@@ -191,6 +196,12 @@ section {
     background-color: bisque;
 }
 
+.class-card:hover {
+    transition: 1s;
+    box-shadow: 10px 10px 10px 0px rgba(25, 42, 70, 0.2);
+    transform: translate(0, -5px);
+}
+
 .class-list-thumb {
     margin-left: 65px;
     width: 180px;
@@ -233,6 +244,37 @@ section {
 .manga-desc {
     width: 100%;
     margin-top: 0.5rem;
+    line-height: 1.5rem;
+}
+
+li a:hover {
+    cursor: pointer;
+}
+
+footer {
+    border-top: 1px solid beige;
+    background-color: antiquewhite;
+    padding: 1rem 0;
+    margin: 1rem 0;
+}
+
+.footer-message {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: black;
+    margin-bottom: 0.2rem;
+}
+
+.footer-contact {
+    font-size: 0.9rem;
+    color: black;
+    margin-bottom: 1rem;
+}
+
+.footer-copyright {
+    margin-bottom: 0.2rem;
+    font-size: 0.9rem;
+    color: black;
 }
 
 @media only screen and (min-width: 1200px){
