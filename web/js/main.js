@@ -1,31 +1,4 @@
-class User {
-    constructor(age, name) {
-        this.age = age
-        this.name = name
-    }
 
-    me() {
-        console.log(this)
-    }
-}
-
-class SuperUser extends User{
-    constructor(age, name) {
-        super(age, name)
-        this.auth = "super!"
-    }
-
-    me() {
-        console.log('this is super user')
-        console.log(this)
-    }
-}
-
-const kky = new SuperUser(20, 'kky')
-
-kky.me()
-
-User.prototype.nickname = 'jam'
-console.log(kky.nickname)
-console.log(kky.hasOwnProperty('name'))
-console.log(kky.hasOwnProperty('nickname'))
+let data = [10, 20, 30]
+const [data1, ...lastdata] = data //이렇게 마지막 요소를 분해할 수도 있음
+console.log(lastdata)
