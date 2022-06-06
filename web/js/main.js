@@ -11,9 +11,12 @@ const promise = new Promise(
     }
 )
 
-promise.then((item) => {
-    console.log('success!', item)
-},
-(err) => {
-    console.log(err)
-})
+promise.then(
+    (item) => {
+        console.log('success!', item)
+    }
+).catch(
+    (error) => {
+        console.log('error!', error)
+    }
+)
