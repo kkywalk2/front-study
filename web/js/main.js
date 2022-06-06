@@ -1,14 +1,19 @@
-function func() {
-    {
-        var a = 1;
+const promise = new Promise(
+    (resolve, reject) => {
+        setTimeout(() => {
+            let num = 10
+            if(num > 11) {
+                resolve(num)
+            } else {
+                reject('error!')
+            }
+        }, 1000)
     }
-    console.log(a) // 1이 출력됨
-}
-func()
-console.log(a)
+)
 
-{
-    var b= 2;
-}
-
-console.log(b)
+promise.then((item) => {
+    console.log('success!', item)
+},
+(err) => {
+    console.log(err)
+})
