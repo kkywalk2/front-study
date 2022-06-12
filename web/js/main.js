@@ -1,22 +1,9 @@
-const promise = new Promise(
-    (resolve, reject) => {
-        setTimeout(() => {
-            let num = 10
-            if(num > 11) {
-                resolve(num)
-            } else {
-                reject('error!')
-            }
-        }, 1000)
-    }
-)
+const box = document.querySelector(".class-card")
+const originalColor = box.style.backgroundColor
+box.addEventListener("mouseover", () => {
+   box.style.backgroundColor = "red"
+})
 
-promise.then(
-    (item) => {
-        console.log('success!', item)
-    }
-).catch(
-    (error) => {
-        console.log('error!', error)
-    }
-)
+box.addEventListener("mouseout", () => {
+    box.style.backgroundColor = originalColor
+ })
