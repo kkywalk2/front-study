@@ -285,6 +285,33 @@ footer {
     line-height: 200px;
 }
 
+#up-button {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: black;
+    text-align: center;
+    
+    visibility: hidden;
+    z-index: 999;
+}
+
+#up-button::after {
+    content: "\f077";
+    font-family: FontAwesome;
+    font-size: 1.5rem;
+    line-height: 40px;
+    color: white;
+}
+
+#up-button:hover {
+    background-color: darkblue;
+    cursor: pointer;
+}
+
 @media only screen and (min-width: 1200px){
     .inner {
         max-width: 1200px;
