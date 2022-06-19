@@ -25,3 +25,14 @@ newBox.setAttribute("class", "box")
 newBox.style.background = "red"
 document.body.appendChild(newBox) //body tag에 append
 ```
+
+```html
+<!-- 태그에 변수 할당하기, HTML5 에서는 data-변수이름=변수값-->
+<div class="manga-container" data-position="0"></div>
+```
+
+```javascript
+let position = mangaContainer.getAttribute('data-position') // 이렇게 가져올 수 있음
+```
+
+

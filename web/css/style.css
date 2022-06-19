@@ -176,6 +176,16 @@ section {
     cursor: pointer;
 }
 
+.slide-prev-hover:hover {
+    transition: transform 0.5s;
+    transform: translateX(-2px);
+}
+
+.slide-next-hover:hover {
+    transition: transform 0.5s;
+    transform: translateX(2px);
+}
+
 .class-list {
     width: 100%;
     height: 100%;
@@ -183,7 +193,7 @@ section {
     list-style: none;
     padding: 1rem 0;
     margin: 0;
-    overflow: hidden;
+    overflow: none; /* overflow를 hidden으로 설정하면 transform할 경우 이미지 짤림*/
 }
 
 .class-card {
