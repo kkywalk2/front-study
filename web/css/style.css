@@ -251,10 +251,18 @@ section {
     text-overflow: ellipsis;
 }
 
+.manga-title:hover {
+    color: aqua;
+}
+
 .manga-desc {
     width: 100%;
     margin-top: 0.5rem;
     line-height: 1.5rem;
+}
+
+.manga-desc:hover {
+    color: aqua;
 }
 
 li a:hover {
@@ -320,6 +328,14 @@ footer {
 #up-button:hover {
     background-color: darkblue;
     cursor: pointer;
+}
+
+ul li img:hover {
+    cursor: grab;
+}
+
+ul li img:active {
+    cursor: grabbing;
 }
 
 @media only screen and (min-width: 1200px){

@@ -90,5 +90,40 @@ for(let i = 0; i < slidePrevButton.length; i++) {
    }
 }
 
+let mouseStart = false
+let touchStartX = 0
+let currentImg = null
+
+function processTouchEnd(event) {
+   
+}
+
+function processTouchMove(event) {
+
+}
+
+function processTouchStart(event) {
+   mouseStart = true
+   
+   event.preventDefault()
+   touchStartX = event.clientX
+   currentImg = event.target
+
+   currentImg.addEventListener('mousemove', processTouchMove)
+   currentImg.addEventListener('mouseup', processTouchEnd)
+
+   currentClassList = currentImg.parentElement.parentElement.parentElement
+   currentActiveLi = currentClassList.getAttribute('data-position')
+}
+
+const classImgList = document.querySelectorAll('ul li img')
+
+window.addEventListener('dragend', processTouchEnd)
+window.addEventListener('mouseup', processTouchEnd)
+
+for(let i = 0; i < classImgList.length; i++) {
+   classImgList[i].addEventListener('mousedown', processTouchStart)
+}
+
 
 
