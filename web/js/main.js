@@ -93,13 +93,48 @@ for(let i = 0; i < slidePrevButton.length; i++) {
 let mouseStart = false
 let touchStartX = 0
 let currentImg = null
+let currentClassList
+let currentActiveLi
+let nowActiveLi
 
 function processTouchEnd(event) {
-   
+   event.preventDefault()
+
+   if(mouseStart === true) {
+      currentImg.removeEventListener('mousemove', processTouchMove)
+      currentImg.removeEventListener('mousemove', processTouchEnd)
+
+      currentClassList.style.transition = 'transform 1s ease'
+      currentClassList.style.transform = 'translateX(0px)'
+      currentClassList.setAttribute('data-position', 0)
+
+      let arrowContainer = currentClassList.parentElement.getElementsByClassName('arrow-container')[0]
+      let slidePrev = arrowContainer.children[0]
+      let slideNext = arrowContainer.children[1]
+      let eachLiList = currentClassList.getElementsByTagName('li')
+
+      if(currentClassList.clientWidth < (eachLiList.length * 290)) {
+         slidePrev.style.color = '#2f3059'
+         slidePrev.classList.add('slide-prev-hover')
+         slidePrev.addEventListener('click', transformPrev)
+
+         slideNext.style.color = '#cfd8dc'
+         slideNext.classList.remove('slide-prev-hover')
+         slideNext.removeEventListener('click', transformPrev)
+      }
+
+      mouseStart = false
+   }
 }
 
 function processTouchMove(event) {
+   event.preventDefault()
 
+   let currentX = event.clientX || event.touches[0].screenX // 이렇게 하는건 터치스크린에서도 동작하게 하기 위함
+   nowActiveLi = Number(currentActiveLi) + (Number(currentX) - Number(touchStartX))
+
+   currentClassList.style.transition = 'transform 0s linear'
+   currentClassList.style.transform = 'translateX(' + String(nowActiveLi) + 'px)'
 }
 
 function processTouchStart(event) {
@@ -112,7 +147,7 @@ function processTouchStart(event) {
    currentImg.addEventListener('mousemove', processTouchMove)
    currentImg.addEventListener('mouseup', processTouchEnd)
 
-   currentClassList = currentImg.parentElement.parentElement.parentElement
+   currentClassList = currentImg.parentElement.parentElement
    currentActiveLi = currentClassList.getAttribute('data-position')
 }
 
